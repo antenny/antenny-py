@@ -23,6 +23,8 @@ jobs:
       run: pytest --cov=antenny
     - name: Twine
       run: pip install twine
+    - name: Wheel
+      run: pip install wheel
     - name: Dist
       run: python setup.py sdist bdist_wheel
     - name: Check
