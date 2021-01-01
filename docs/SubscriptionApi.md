@@ -308,7 +308,7 @@ start_key = 'start_key_example' # str | Defines start of page of results (option
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cust_id** | [**str**](.md)| Customer Id to get subscriptions | 
+ **cust_id** | **str**| Customer Id to get subscriptions | 
  **sort** | **str**| Defines sort direction | [optional] 
  **limit** | **int**| Limits the number of returned items | [optional] 
  **start_key** | **str**| Defines start of page of results | [optional] 

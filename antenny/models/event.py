@@ -164,12 +164,6 @@ class Event(object):
         :param level: The level of this Event.  # noqa: E501
         :type level: str
         """
-        allowed_values = ["INFO", "WARNING", "ERROR"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and level not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `level` ({0}), must be one of {1}"  # noqa: E501
-                .format(level, allowed_values)
-            )
 
         self._level = level
 

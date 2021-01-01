@@ -1,4 +1,3 @@
-README.md
 antenny/__init__.py
 antenny/api/__init__.py
 antenny/api/client_api.py

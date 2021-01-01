@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **customer_id** | **str** |  | [optional] 
-**secret** | **str** | Signing secret | [optional] 
-**status** | **str** | Registration status | [optional] 
+**secret** | **str** |  | [optional] 
+**status** | **str** |  | [optional] 
 **clients** | **list[str]** |  | [optional] 
 **subscriptions** | **list[str]** |  | [optional] 
 **created** | **date** |  | [optional] 

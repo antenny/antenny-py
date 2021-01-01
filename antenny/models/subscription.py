@@ -36,6 +36,8 @@ class Subscription(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
+        'customer_id': 'str',
+        'region': 'str',
         'resource': 'Resource',
         'endpoint': 'Endpoint',
         'status': 'str',
@@ -46,6 +48,8 @@ class Subscription(object):
     attribute_map = {
         'id': 'id',
         'name': 'name',
+        'customer_id': 'customerId',
+        'region': 'region',
         'resource': 'resource',
         'endpoint': 'endpoint',
         'status': 'status',
@@ -53,7 +57,7 @@ class Subscription(object):
         'modified': 'modified'
     }
 
-    def __init__(self, id=None, name=None, resource=None, endpoint=None, status=None, created=None, modified=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, customer_id=None, region=None, resource=None, endpoint=None, status=None, created=None, modified=None, local_vars_configuration=None):  # noqa: E501
         """Subscription - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,6 +65,8 @@ class Subscription(object):
 
         self._id = None
         self._name = None
+        self._customer_id = None
+        self._region = None
         self._resource = None
         self._endpoint = None
         self._status = None
@@ -72,6 +78,10 @@ class Subscription(object):
             self.id = id
         if name is not None:
             self.name = name
+        if customer_id is not None:
+            self.customer_id = customer_id
+        if region is not None:
+            self.region = region
         if resource is not None:
             self.resource = resource
         if endpoint is not None:
@@ -130,6 +140,48 @@ class Subscription(object):
             raise ValueError("Invalid value for `name`, length must be greater than or equal to `3`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def customer_id(self):
+        """Gets the customer_id of this Subscription.  # noqa: E501
+
+
+        :return: The customer_id of this Subscription.  # noqa: E501
+        :rtype: str
+        """
+        return self._customer_id
+
+    @customer_id.setter
+    def customer_id(self, customer_id):
+        """Sets the customer_id of this Subscription.
+
+
+        :param customer_id: The customer_id of this Subscription.  # noqa: E501
+        :type customer_id: str
+        """
+
+        self._customer_id = customer_id
+
+    @property
+    def region(self):
+        """Gets the region of this Subscription.  # noqa: E501
+
+
+        :return: The region of this Subscription.  # noqa: E501
+        :rtype: str
+        """
+        return self._region
+
+    @region.setter
+    def region(self, region):
+        """Sets the region of this Subscription.
+
+
+        :param region: The region of this Subscription.  # noqa: E501
+        :type region: str
+        """
+
+        self._region = region
 
     @property
     def resource(self):
@@ -191,12 +243,6 @@ class Subscription(object):
         :param status: The status of this Subscription.  # noqa: E501
         :type status: str
         """
-        allowed_values = ["PENDING", "CONNECTING", "CONNECTED", "ERRORED", "CANCELED"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and status not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
-                .format(status, allowed_values)
-            )
 
         self._status = status
 

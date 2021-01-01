@@ -134,7 +134,6 @@ class Registration(object):
     def secret(self):
         """Gets the secret of this Registration.  # noqa: E501
 
-        Signing secret  # noqa: E501
 
         :return: The secret of this Registration.  # noqa: E501
         :rtype: str
@@ -145,7 +144,6 @@ class Registration(object):
     def secret(self, secret):
         """Sets the secret of this Registration.
 
-        Signing secret  # noqa: E501
 
         :param secret: The secret of this Registration.  # noqa: E501
         :type secret: str
@@ -157,7 +155,6 @@ class Registration(object):
     def status(self):
         """Gets the status of this Registration.  # noqa: E501
 
-        Registration status  # noqa: E501
 
         :return: The status of this Registration.  # noqa: E501
         :rtype: str
@@ -168,17 +165,10 @@ class Registration(object):
     def status(self, status):
         """Sets the status of this Registration.
 
-        Registration status  # noqa: E501
 
         :param status: The status of this Registration.  # noqa: E501
         :type status: str
         """
-        allowed_values = ["SUBSCRIBE-PENDING", "SUBSCRIBE-SUCCESS", "SUBSCRIBE-FAIL", "UNSUBSCRIBE-PENDING", "UNSUBSCRIBE-SUCCESS"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and status not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
-                .format(status, allowed_values)
-            )
 
         self._status = status
 

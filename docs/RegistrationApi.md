@@ -60,7 +60,7 @@ with antenny.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cust_id** | [**str**](.md)| Customer Id for registration | 
+ **cust_id** | **str**| Customer Id for registration | 
 
 ### Return type
 

@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
+**customer_id** | **str** |  | [optional] 
+**region** | **str** |  | [optional] 
 **resource** | [**Resource**](Resource.md) |  | [optional] 
 **endpoint** | [**Endpoint**](Endpoint.md) |  | [optional] 
 **status** | **str** |  | [optional] 
