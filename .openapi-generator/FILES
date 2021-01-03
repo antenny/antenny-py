@@ -13,7 +13,9 @@ antenny/models/client_list.py
 antenny/models/endpoint.py
 antenny/models/event.py
 antenny/models/event_list.py
+antenny/models/header.py
 antenny/models/inline_object.py
+antenny/models/message.py
 antenny/models/new_client.py
 antenny/models/new_subscription.py
 antenny/models/registration.py
@@ -28,7 +30,9 @@ docs/Endpoint.md
 docs/Event.md
 docs/EventList.md
 docs/EventsApi.md
+docs/Header.md
 docs/InlineObject.md
+docs/Message.md
 docs/NewClient.md
 docs/NewSubscription.md
 docs/Registration.md

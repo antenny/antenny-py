@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 
 # import apis into sdk package
 from antenny.api.client_api import ClientApi
@@ -38,7 +38,9 @@ from antenny.models.client_list import ClientList
 from antenny.models.endpoint import Endpoint
 from antenny.models.event import Event
 from antenny.models.event_list import EventList
+from antenny.models.header import Header
 from antenny.models.inline_object import InlineObject
+from antenny.models.message import Message
 from antenny.models.new_client import NewClient
 from antenny.models.new_subscription import NewSubscription
 from antenny.models.registration import Registration

@@ -35,15 +35,19 @@ class Resource(object):
     """
     openapi_types = {
         'protocol': 'str',
-        'url': 'str'
+        'url': 'str',
+        'headers': 'list[Header]',
+        'messages': 'list[Message]'
     }
 
     attribute_map = {
         'protocol': 'protocol',
-        'url': 'url'
+        'url': 'url',
+        'headers': 'headers',
+        'messages': 'messages'
     }
 
-    def __init__(self, protocol=None, url=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, protocol=None, url=None, headers=None, messages=None, local_vars_configuration=None):  # noqa: E501
         """Resource - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,10 +55,16 @@ class Resource(object):
 
         self._protocol = None
         self._url = None
+        self._headers = None
+        self._messages = None
         self.discriminator = None
 
         self.protocol = protocol
         self.url = url
+        if headers is not None:
+            self.headers = headers
+        if messages is not None:
+            self.messages = messages
 
     @property
     def protocol(self):
@@ -107,6 +117,48 @@ class Resource(object):
             raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
+
+    @property
+    def headers(self):
+        """Gets the headers of this Resource.  # noqa: E501
+
+
+        :return: The headers of this Resource.  # noqa: E501
+        :rtype: list[Header]
+        """
+        return self._headers
+
+    @headers.setter
+    def headers(self, headers):
+        """Sets the headers of this Resource.
+
+
+        :param headers: The headers of this Resource.  # noqa: E501
+        :type headers: list[Header]
+        """
+
+        self._headers = headers
+
+    @property
+    def messages(self):
+        """Gets the messages of this Resource.  # noqa: E501
+
+
+        :return: The messages of this Resource.  # noqa: E501
+        :rtype: list[Message]
+        """
+        return self._messages
+
+    @messages.setter
+    def messages(self, messages):
+        """Sets the messages of this Resource.
+
+
+        :param messages: The messages of this Resource.  # noqa: E501
+        :type messages: list[Message]
+        """
+
+        self._messages = messages
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -20,7 +20,9 @@ from antenny.models.client_list import ClientList
 from antenny.models.endpoint import Endpoint
 from antenny.models.event import Event
 from antenny.models.event_list import EventList
+from antenny.models.header import Header
 from antenny.models.inline_object import InlineObject
+from antenny.models.message import Message
 from antenny.models.new_client import NewClient
 from antenny.models.new_subscription import NewSubscription
 from antenny.models.registration import Registration
