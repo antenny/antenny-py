@@ -86,7 +86,7 @@ class Resource(object):
         """
         if self.local_vars_configuration.client_side_validation and protocol is None:  # noqa: E501
             raise ValueError("Invalid value for `protocol`, must not be `None`")  # noqa: E501
-        allowed_values = ["ws"]  # noqa: E501
+        allowed_values = ["ws", "http"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and protocol not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `protocol` ({0}), must be one of {1}"  # noqa: E501
